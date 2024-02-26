@@ -1,0 +1,1 @@
+// installed nodejs, typescript and vs code
