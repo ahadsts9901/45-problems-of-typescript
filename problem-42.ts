@@ -1,25 +1,26 @@
-let magician_names = ["magician-1", "magician-2", "magician-3"];
+const magicians_ = ["magician-1", "magician-2", "magician-3"]
 
-function show_magicians(magician_name: string[]) {
-    for (let i = 0; i < magician_name.length; i++) {
-        console.log(magician_name[i]);
+const show_magicians_ = (array: string[]) => {
+
+    for (let i = 0; i < array.length; i++) {
+
+        console.log(array[i]);
+
     }
-}
-
-function make_great(magician_name: string[]) {
-
-    let great_magicians: string[] = [];
-
-    magician_name.map((mag_name: string) => {
-        let mag_name1 = `the great ${mag_name}`;
-        great_magicians.push(mag_name1);
-    });
-
-    magician_names = great_magicians;
-    return magician_names;
 
 }
 
-show_magicians(magician_names);
-make_great(magician_names);
-console.log(magician_names);
+show_magicians_(magicians_)
+
+const make_great = (array: string[]) => {
+
+    for (let i = 0; i < array.length; i++) {
+
+        array[i] = `the great ${array[i]}`
+
+    }
+
+}
+
+make_great(magicians_)
+show_magicians_(magicians_)
